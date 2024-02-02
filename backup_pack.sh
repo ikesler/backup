@@ -3,10 +3,11 @@ set -e
 
 backup_name="$1"
 
-source_dir="/v/backup/$backup_name/create"
-target_dir="/v/backup/$backup_name/pack"
+source_dir="/var/tmp/backup/$backup_name/create"
+target_dir="/var/tmp/backup/$backup_name/pack"
 
 cd "$source_dir"
+mkdir -p "$target_dir"
 
 tar -czf "$target_dir/backup.tar.gz" .
 
