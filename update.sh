@@ -5,3 +5,5 @@ git pull
 chmod +x ./backup_create_sqlite.sh
 chmod +x ./backup_pack.sh
 chmod +x ./backup_send_s3.sh
+mkdir -p '/var/tmp/backup'
+chown -R /var/tmp/backup
