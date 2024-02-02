@@ -2,6 +2,9 @@
 
 set -e
 
+# Load env variables from .env file
+export $(grep -v '^#' .env | xargs)
+
 backup_name="$1"
 sqlite_db_path="$2"
 
