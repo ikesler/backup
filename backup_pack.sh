@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-backup_name = "$1"
+backup_name="$1"
 
-source_dir = "/v/backup/$backup_name/create"
-target_dir = "/v/backup/$backup_name/pack"
+source_dir="/v/backup/$backup_name/create"
+target_dir="/v/backup/$backup_name/pack"
 
 cd "$source_dir"
 
