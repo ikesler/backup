@@ -15,4 +15,3 @@ fi
 mkdir -p "$tmp_dir"
 
 sqlite3 "$sqlite_file" ".backup '$tmp_dir/$sqlite_db_filename'"
-find . -type f ! -name 'database.sqlite' -exec cp --parents {} "$tmp_dir" \;
