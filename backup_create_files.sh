@@ -10,6 +10,6 @@ find_predicate="$2"
 
 tmp_dir="/var/tmp/backup/$backup_name/create"
 
-cmd="find $find_predicate -exec cp --parents {} $tmp_dir;"
+cmd="find $find_predicate -exec cp --parents {} $tmp_dir \;"
 echo "$cmd"
 eval "$cmd"
