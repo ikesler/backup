@@ -17,4 +17,4 @@ fi
 
 mkdir -p "$tmp_dir"
 
-sqlite3 "$sqlite_file" ".backup '$tmp_dir/$sqlite_db_filename'"
+sqlite3 "$sqlite_db_path" ".backup '$tmp_dir/$sqlite_db_filename'"
