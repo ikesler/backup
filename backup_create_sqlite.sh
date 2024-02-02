@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -e
 
 backup_name="$1"
