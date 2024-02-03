@@ -11,4 +11,4 @@ find_predicate="$3"
 
 tmp_dir="/var/tmp/backup/$backup_name/create"
 
-(cd ${source_dir} && find . ${find_predicate} -exec cp --parents {} ${tmp_dir} \;)
+(cd ${source_dir} && eval("find . $find_predicate -exec cp --parents {} $tmp_dir \;")
