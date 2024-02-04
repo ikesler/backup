@@ -14,7 +14,7 @@ cd "$source_dir"
 
 tar -czf "$target_dir/backup.tar.gz" .
 
-gpg --batch --yes --passphrase "$BACKUP_ENCRYPTION_KEY" -c "$target_dir/backup.tar.gz"
+gpg --batch --yes --passphrase-file "$BACKUP_ENCRYPTION_KEY_FILE" -c "$target_dir/backup.tar.gz"
 
 cd "$target_dir"
 
