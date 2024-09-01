@@ -9,4 +9,7 @@ chmod +x ./backup_create_dir.sh
 chmod +x ./backup_create_postgres.sh
 chmod +x ./backup_pack.sh
 chmod +x ./backup_send_s3.sh
-mkdir -p '/var/tmp/backup'
+chmod +x ./update.sh
+
+rm -rf /var/tmp/backup
+mkdir -p /var/tmp/backup
