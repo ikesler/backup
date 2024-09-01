@@ -12,7 +12,7 @@ mkdir -p "$target_dir"
 
 cd "$source_dir"
 
-timeout 300s tar -czf "$target_dir/backup.tar.gz" .
+timeout 300s tar -czhf "$target_dir/backup.tar.gz" .
 
 timeout 300s gpg --batch --yes --passphrase-file "$BACKUP_ENCRYPTION_KEY_FILE" -c "$target_dir/backup.tar.gz"
 
