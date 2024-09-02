@@ -13,7 +13,7 @@ mkdir -p "$target_dir"
 
 cd "$source_dir"
 
-timeout 300s tar ${tar_options} -czh . | age -r "$BACKUP_AGE_KEY" > "$target_dir/backup.tar.gz.age"
+timeout 300s tar ${tar_options} -czh -f - . | age -r "$BACKUP_AGE_KEY" > "$target_dir/backup.tar.gz.age"
 
 cd "$target_dir"
 
