@@ -7,7 +7,7 @@ export $(grep -v '^#' .env | xargs)
 backup_name="$1"
 tar_options="$2"
 
-source_dir="  /$backup_name/create"
+source_dir="/var/tmp/backup/$backup_name/create"
 target_dir="/var/tmp/backup/$backup_name/pack"
 mkdir -p "$target_dir"
 
