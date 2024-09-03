@@ -3,7 +3,9 @@
 set -e
 
 # Load env variables from .env file
-export $(grep -v '^#' .env | xargs)
+if [ -f .env ]; then
+    export $(grep -v '^#' .env | xargs)
+fi
 
 backup_name="$1"
 backup_directory="./$backup_name"
