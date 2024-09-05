@@ -13,5 +13,6 @@ find_predicate="$3"
 prefix="$4"
 
 tmp_dir="/var/tmp/backup/$backup_name/create"
+mkdir -p "$tmp_dir$prefix"
 
 (cd ${source_dir} && eval "find . $find_predicate -exec cp --parents {} $tmp_dir$prefix \;")
